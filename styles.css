@@ -24,7 +24,7 @@ body {
     border-radius: 50%; /* Forma circular */
     overflow: hidden;
     background: #000;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.795);
     box-shadow: 
         0 0 30px rgba(0, 0, 0, 0.6),
         0 0 60px rgba(0, 0, 0, 0.3),
