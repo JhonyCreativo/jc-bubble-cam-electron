@@ -1,0 +1,244 @@
+/* Reset básico y configuración del body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: transparent; /* Fondo transparente para la ventana */
+    overflow: hidden; /* Sin scroll */
+    user-select: none; /* No seleccionar texto */
+    -webkit-app-region: drag; /* Permite arrastrar la ventana */
+}
+
+/* Contenedor principal de la burbuja */
+#bubble-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Forma circular */
+    overflow: hidden;
+    background: #000;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: move;
+}
+
+/* Efecto hover en la burbuja */
+#bubble-container:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 
+        0 0 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+}
+
+/* Video de la cámara */
+#camera-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporción y llena el círculo */
+    border-radius: 50%;
+    background: #1a1a1a;
+}
+
+/* Barra inferior flotante con controles */
+#bottom-controls-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 8px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.3s ease;
+    -webkit-app-region: no-drag; /* Los controles no arrastran la ventana */
+    z-index: 1000;
+}
+
+/* Mostrar barra de controles al hacer hover en la burbuja */
+#bubble-container:hover + #bottom-controls-bar,
+#bottom-controls-bar:hover {
+    opacity: 1;
+}
+
+/* Botones de control */
+#bottom-controls-bar button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Efecto hover en botones */
+#bottom-controls-bar button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+/* Efecto activo en botones */
+#bottom-controls-bar button:active {
+    transform: scale(0.95);
+}
+
+/* Botón de cámara cuando está desactivada */
+#toggle-camera.camera-off {
+    background: rgba(255, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Botón de click-through cuando está activo */
+#toggle-clickthrough.active {
+    background: rgba(0, 255, 0, 0.3);
+    border-color: rgba(0, 255, 0, 0.5);
+}
+
+/* Indicador de estado */
+#status-indicator {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+}
+
+/* Mostrar indicador de estado */
+#bubble-container:hover #status-indicator {
+    opacity: 1;
+}
+
+/* Handle de redimensionamiento */
+#resize-handle {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: nw-resize;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    -webkit-app-region: no-drag;
+}
+
+/* Mostrar handle al hacer hover */
+#bubble-container:hover #resize-handle {
+    opacity: 1;
+}
+
+/* Handle hover effect */
+#resize-handle:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+}
+
+/* Mensaje de error */
+#error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Animación de pulso para indicar actividad */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Clase para animación de pulso */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Modo click-through - reduce opacidad */
+.click-through {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Indicador visual de click-through */
+.click-through #bubble-container {
+    border-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 0, 0.3),
+        inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+/* Responsive - ajustes para diferentes tamaños */
+@media (max-width: 150px) {
+    #controls-overlay button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    #status-indicator {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+/* Efectos de transición suaves */
+#bubble-container,
+#camera-video,
+#controls-overlay,
+#controls-overlay button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar oculto (por si acaso) */
+::-webkit-scrollbar {
+    display: none;
+}

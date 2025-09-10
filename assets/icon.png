@@ -1,0 +1,30 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular con gradiente -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </radialGradient>
+    <radialGradient id="lens" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.8"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Círculo principal -->
+  <circle cx="128" cy="128" r="120" fill="url(#bg)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Lente de la cámara -->
+  <circle cx="128" cy="128" r="60" fill="url(#lens)" stroke="#333333" stroke-width="3"/>
+  
+  <!-- Reflejo en la lente -->
+  <ellipse cx="110" cy="110" rx="15" ry="25" fill="#ffffff" opacity="0.6" transform="rotate(-30 110 110)"/>
+  
+  <!-- Punto central -->
+  <circle cx="128" cy="128" r="8" fill="#333333"/>
+  
+  <!-- Indicador de grabación -->
+  <circle cx="180" cy="80" r="12" fill="#ff4757" opacity="0.8"/>
+  <circle cx="180" cy="80" r="6" fill="#ffffff"/>
+</svg>

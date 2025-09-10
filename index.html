@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC Bubble Cam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de la burbuja -->
+    <div id="bubble-container">
+        <!-- Video element para mostrar la cámara -->
+        <video id="camera-video" autoplay muted playsinline></video>
+        
+        <!-- Indicador de estado (aparece al hacer hover) -->
+        <div id="status-indicator">
+            <span id="status-text">Cámara iniciando...</span>
+        </div>
+        
+        <!-- Área de redimensionamiento (esquina inferior derecha) -->
+        <div id="resize-handle" title="Arrastrar para redimensionar"></div>
+    </div>
+    
+    <!-- Barra inferior flotante con controles -->
+    <div id="bottom-controls-bar">
+        <!-- Botón para alternar cámara on/off -->
+        <button id="toggle-camera" title="Activar/Desactivar cámara">
+            <span id="camera-icon">📹</span>
+        </button>
+        
+        <!-- Botón para alternar modo click-through -->
+        <button id="toggle-clickthrough" title="Modo click-through (Ctrl+Alt+T)">
+            <span id="clickthrough-icon">👆</span>
+        </button>
+        
+        <!-- Botón para cerrar/ocultar -->
+        <button id="hide-window" title="Ocultar ventana (Ctrl+Alt+H)">
+            <span>✖️</span>
+        </button>
+    </div>
+    
+    <!-- Mensaje de error (oculto por defecto) -->
+    <div id="error-message" style="display: none;">
+        <p>❌ Error al acceder a la cámara</p>
+        <p>Verifica que tengas una cámara conectada y permisos habilitados.</p>
+    </div>
+    
+    <!-- Script principal -->
+    <script src="renderer.js"></script>
+</body>
+</html>
