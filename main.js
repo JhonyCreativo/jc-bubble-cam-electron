@@ -18,8 +18,8 @@ let isClickThrough = false;
 function createWindow() {
   // Creamos la ventana con configuraciones específicas
   mainWindow = new BrowserWindow({
-    width: 300,              // Ancho inicial de la ventana (aumentado para mejor visualización de sombras)
-    height: 380,             // Alto inicial de la ventana (aumentado para la barra inferior y sombras)
+    width: 500,              // Ancho inicial de la ventana (aumentado para burbuja expandida de 400px)
+    height: 580,             // Alto inicial de la ventana (aumentado para burbuja expandida y barra inferior)
     frame: false,            // Sin marco de ventana (sin barra de título)
     transparent: true,       // Fondo transparente para forma circular
     alwaysOnTop: true,       // Siempre encima de otras ventanas

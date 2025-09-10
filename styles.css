@@ -28,9 +28,19 @@ body {
     box-shadow: 
         0 0 30px rgba(0, 0, 0, 0.6),
         0 0 60px rgba(0, 0, 0, 0.3),
-        inset 0 0 20px rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
     cursor: move;
+}
+
+/* Burbuja en tamaño expandido (doble click) */
+#bubble-container.expanded {
+    width: 400px;
+    height: 400px;
+    box-shadow: 
+        0 0 50px rgba(0, 0, 0, 0.7),
+        0 0 100px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
 /* Efecto hover en la burbuja */
@@ -55,7 +65,7 @@ body {
 /* Barra inferior flotante con controles */
 #bottom-controls-bar {
     position: fixed;
-    bottom: 10px;
+    bottom: 120px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
@@ -66,11 +76,16 @@ body {
     gap: 10px;
     align-items: center;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     -webkit-app-region: no-drag; /* Los controles no arrastran la ventana */
     z-index: 1000;
+}
+
+/* Ajuste de posición cuando la burbuja está expandida */
+#bubble-container.expanded ~ #bottom-controls-bar {
+    bottom: 10px;
 }
 
 /* Mostrar barra de controles al hacer hover en la burbuja */
@@ -210,9 +225,9 @@ body {
 
 /* Indicador visual de click-through */
 .click-through #bubble-container {
-    border-color: rgba(0, 255, 0, 0.5);
+    border-color: rgba(129, 166, 177, 0.5);
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.3),
+        0 0 20px rgba(196, 235, 196, 0.3),
         inset 0 0 20px rgba(0, 255, 0, 0.1);
 }
 
