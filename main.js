@@ -28,7 +28,7 @@ function createWindow() {
     minimizable: false,      // No se puede minimizar
     maximizable: false,      // No se puede maximizar
     closable: true,          // Se puede cerrar
-    skipTaskbar: true,       // No aparece en la barra de tareas
+    skipTaskbar: false,      // Aparece en la barra de tareas
     hasShadow: false,        // Sin sombra para mejor rendimiento
     thickFrame: false,       // Sin marco grueso
     webPreferences: {
