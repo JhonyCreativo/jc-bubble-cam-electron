@@ -310,12 +310,23 @@ document.addEventListener('DOMContentLoaded', () => {
     updateStatus('Iniciando aplicación...');
     updateCameraButton();
     updateClickThroughButton();
+    setupDoubleClickToggle();
     
     // Inicializamos la cámara automáticamente
     setTimeout(() => {
         initializeCamera();
     }, 500);
 });
+
+// Funcionalidad de doble click para expandir/contraer la burbuja
+function setupDoubleClickToggle() {
+    const bubbleContainer = document.getElementById('bubble-container');
+    
+    bubbleContainer.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        bubbleContainer.classList.toggle('expanded');
+    });
+}
 
 // Limpieza al cerrar la ventana
 window.addEventListener('beforeunload', () => {
