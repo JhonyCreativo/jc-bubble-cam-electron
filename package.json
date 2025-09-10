@@ -8,6 +8,7 @@
     "dev": "electron . --dev",
     "build": "electron-builder",
     "build-win": "electron-builder --win",
+    "pack-win": "electron-packager . jc-bubble-cam --platform=win32 --arch=x64 --out=dist --overwrite",
     "dist": "npm run build"
   },
   "keywords": [
@@ -21,7 +22,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^28.0.0",
-    "electron-builder": "^24.9.1"
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
   },
   "dependencies": {
     "electron-localshortcut": "^3.2.1"
@@ -30,16 +32,23 @@
     "appId": "com.jc.bubblecam",
     "productName": "JC Bubble Cam",
     "directories": {
-      "output": "dist"
+      "output": "build"
     },
     "files": [
       "**/*",
       "!node_modules/**/*",
       "node_modules/electron-localshortcut/**/*"
     ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
     "win": {
       "target": "portable",
-      "icon": "assets/icon.png"
-    }
+      "icon": "assets/icon.png",
+      "certificateFile": null,
+      "certificatePassword": null
+    },
+    "forceCodeSigning": false
   }
 }

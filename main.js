@@ -28,7 +28,7 @@ function createWindow() {
     minimizable: false,      // No se puede minimizar
     maximizable: false,      // No se puede maximizar
     closable: true,          // Se puede cerrar
-    skipTaskbar: true,       // No aparece en la barra de tareas
+    skipTaskbar: false,      // Aparece en la barra de tareas
     hasShadow: false,        // Sin sombra para mejor rendimiento
     thickFrame: false,       // Sin marco grueso
     webPreferences: {
@@ -49,13 +49,10 @@ function createWindow() {
     mainWindow = null;
   });
 
-  // Evitamos que la ventana se cierre completamente al hacer clic en X
-  mainWindow.on('close', (event) => {
-    if (!app.isQuiting) {
-      event.preventDefault();
-      mainWindow.hide();
-      isVisible = false;
-    }
+  // Configuramos el comportamiento al cerrar la ventana con X
+  // La aplicación se cerrará completamente
+  mainWindow.on('close', () => {
+    app.quit();
   });
 
   // La forma circular se maneja con CSS en lugar de setShape
