@@ -124,11 +124,11 @@ function updateCameraButton() {
     const icon = document.getElementById('camera-icon');
     if (isCameraActive) {
         toggleCameraBtn.classList.remove('camera-off');
-        icon.textContent = '📹';
+        // icon.textContent = '📹';
         toggleCameraBtn.title = 'Desactivar cámara';
     } else {
         toggleCameraBtn.classList.add('camera-off');
-        icon.textContent = '📷';
+        // icon.textContent = '📷';
         toggleCameraBtn.title = 'Activar cámara';
     }
 }
@@ -140,11 +140,11 @@ function updateClickThroughButton() {
     const icon = document.getElementById('clickthrough-icon');
     if (isClickThrough) {
         toggleClickthroughBtn.classList.add('active');
-        icon.textContent = '👻';
+        // icon.textContent = '👻';
         document.body.classList.add('click-through');
     } else {
         toggleClickthroughBtn.classList.remove('active');
-        icon.textContent = '👆';
+        // icon.textContent = '👆';
         document.body.classList.remove('click-through');
     }
 }
