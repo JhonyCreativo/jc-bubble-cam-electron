@@ -143,3 +143,6 @@ Si tienes problemas o sugerencias:
 ---
 
 **JC Bubble Cam Web** - Convierte tu cámara en una experiencia flotante elegante y funcional. 🎥✨
+
+## Licencia
+Este proyecto está bajo la [Licencia Jhony Creativo](./LICENSE).
