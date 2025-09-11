@@ -1,8 +1,8 @@
-#JC Bubble Cam Web 📹
+# JC Bubble Cam Web 📹
 
 A minimalist desktop app that turns your webcam into a sleek, always-on floating bubble.
 
-[JC Bubble Cam Preview](screenshot/v1.png)
+![JC Bubble Cam Preview](screenshot/v1.png)
 
 ## 🎯 What's it for?
 
