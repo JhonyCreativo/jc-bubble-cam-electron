@@ -1,148 +1,147 @@
-# JC Bubble Cam Web 📹
+#JC Bubble Cam Web 📹
 
-Una aplicación de escritorio minimalista que convierte tu cámara web en una burbuja flotante elegante y siempre visible.
+A minimalist desktop app that turns your webcam into a sleek, always-on floating bubble.
 
-![JC Bubble Cam Preview](screenshot/v1.png)
+[JC Bubble Cam Preview](screenshot/v1.png)
 
-## 🎯 ¿Para qué sirve?
+## 🎯 What's it for?
 
-**JC Bubble Cam Web** es perfecta para:
+**JC Bubble Cam Web** is perfect for:
 
-- **Videollamadas profesionales**: Mantén tu imagen visible mientras trabajas en otras aplicaciones
-- **Streaming y contenido**: Superpón tu cámara sobre cualquier contenido sin interferir
-- **Monitoreo personal**: Verifica tu apariencia antes de reuniones importantes
-- **Grabación de tutoriales**: Mantén tu presencia visible mientras enseñas
-- **Trabajo remoto**: Permanece "presente" visualmente durante largas sesiones de trabajo
+- **Professional video calls**: Keep your image visible while working in other applications
+- **Streaming and content**: Overlay your camera over any content without interfering
+- **Personal monitoring**: Check your appearance before important meetings
+- **Tutorial recording**: Keep your presence visible while teaching
+- **Remote work**: Stay visually present during long work sessions
 
-## ✨ Características principales
+## ✨ Main features
 ![JC Bubble Cam Preview](screenshot/v1_horizontal.png)
-### 🔄 **Doble tamaño adaptable**
-- **Doble clic**: Expande la burbuja al doble de tamaño (200px → 400px)
-- **Doble clic nuevamente**: Regresa al tamaño original
-- **Transición suave**: Animación fluida de 0.5 segundos
+### 🔄 **Double Resizable**
+- **Double click**: Expand the bubble to twice the size (200px → 400px)
+- **Double click again**: Return to the original size
+- **Smooth transition**: Smooth 0.5-second animation
 
-### 🎮 **Controles inteligentes**
-- **Barra flotante adaptativa**: Se reposiciona automáticamente según el tamaño de la burbuja
-- **Hover para mostrar**: Los controles aparecen al pasar el mouse
-- **Botones intuitivos**: Ocultar, cerrar y configuraciones
+### 🎮 **Smart controls**
+- **Bar Adaptive hover**: Automatically repositions based on the bubble size
+- **Hover to show**: Controls appear on mouse hover
+- **Intuitive buttons**: Hide, close, and settings
 
-### 🖱️ **Interacción fluida**
-- **Arrastrar libremente**: Mueve la burbuja a cualquier parte de la pantalla
-- **Siempre encima**: Permanece visible sobre todas las aplicaciones
-- **Ventana sin bordes**: Diseño limpio y minimalista
+### 🖱️ **Fluid interaction**
+- **Free drag**: Move the bubble anywhere on the screen
+- **Always on top**: Stays visible on top of all apps
+- **Borderless window**: Clean and minimalist design
 
-### 🎨 **Diseño elegante**
-- **Forma circular perfecta**: Burbuja con bordes redondeados
-- **Efectos visuales**: Sombras suaves y transiciones animadas
-- **Interfaz moderna**: Controles con iconos y efectos hover
+### 🎨 **Elegant design**
+- **Perfect circular shape**: Bubble with rounded edges
+- **Visual effects**: Smooth shadows and animated transitions
+- **Modern interface**: Controls with icons and hover effects
 
-## 🚀 Instalación y uso
+## 🚀 Installation and use
 
-### Prerrequisitos
-- Node.js (versión 14 o superior)
-- npm o yarn
-- Cámara web funcional
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
+- Functional webcam
 
-### Instalación
+### Installation
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/jc-bubble-cam-web.git
+# Clone the repository
+git clone https://github.com/your-user/jc-bubble-cam-web.git
 
-# Navegar al directorio
+# Navigate to the directory
 cd jc-bubble-cam-web
 
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Ejecutar la aplicación
+# Run the application
 npm start
 ```
 
-### Uso básico
+### Basic Usage
 
-1. **Iniciar**: Ejecuta `npm start` para abrir la burbuja de cámara
-2. **Posicionar**: Arrastra la burbuja donde prefieras en tu pantalla
-3. **Expandir**: Haz doble clic para agrandar la vista
-4. **Contraer**: Haz doble clic nuevamente para volver al tamaño normal
-5. **Controles**: Pasa el mouse sobre la burbuja para ver las opciones
+1. **Start**: Run `npm start` to open the camera bubble
+2. **Position**: Drag the bubble wherever you want on your screen
+3. **Expand**: Double-click to enlarge the view
+4. **Collapse**: Double-click again to return to normal size
+5. **Controls**: Hover over the bubble to see options
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Technologies Used
 
-- **Electron**: Framework para aplicaciones de escritorio
-- **HTML5**: Estructura y acceso a la cámara web
-- **CSS3**: Estilos, animaciones y efectos visuales
-- **JavaScript**: Lógica de interacción y controles
-- **WebRTC**: API para acceso a la cámara
+- **Electron**: Framework for desktop applications
+- **HTML5**: Webcam structure and access
+- **CSS3**: Styles, animations, and effects Visuals
+- **JavaScript**: Interaction logic and controls
+- **WebRTC**: API for camera access
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
 ```
 jc-bubble-cam-web/
 ├── assets/
-│   ├── icon.ico          # Icono de la aplicación
-│   └── icon.png          # Icono en formato PNG
+│ ├── icon.ico # App icon
+│ └── icon.png # PNG icon
 ├── screenshot/
-│   └── v1.png            # Captura de pantalla
-├── index.html            # Interfaz principal
-├── main.js               # Proceso principal de Electron
-├── renderer.js           # Lógica del renderizador
-├── styles.css            # Estilos y animaciones
-├── package.json          # Configuración del proyecto
-└── README.md             # Este archivo
+│ └── v1.png # Screenshot
+├── index.html # Main interface
+├── main.js # Main Electron process
+├── renderer.js # Renderer logic
+├── styles.css # Styles and animations
+├── package.json # Project Setup
+└── README.md # This file
 ```
 
-## 🎯 Casos de uso ideales
+## 🎯 Ideal Use Cases
 
-### Para profesionales
-- **Reuniones virtuales**: Mantente visible mientras compartes pantalla
-- **Presentaciones**: Superpón tu imagen sobre diapositivas
-- **Consultas online**: Interacción cara a cara con clientes
+### For Professionals
+- **Virtual Meetings**: Stay visible while screen sharing
+- **Presentations**: Overlay your image on slides
+- **Online Consultations**: Face-to-face interaction with clients
 
-### Para creadores de contenido
-- **Streaming**: Cámara flotante sobre juegos o aplicaciones
-- **Tutoriales**: Presencia personal en videos educativos
-- **Podcasts con video**: Vista compacta del presentador
+### For Content Creators
+- **Streaming**: Floating camera over games or apps
+- **Tutorials**: Personal presence in educational videos
+- **Video Podcasts**: Compact presenter view
 
-### Para uso personal
-- **Trabajo remoto**: "Presencia" visual durante el día
-- **Monitoreo**: Verificar apariencia antes de videollamadas
-- **Multitarea**: Cámara visible mientras usas otras apps
+### For Personal Use
+- **Remote Work**: Visual "presence" during the day
+- **Monitoring**: Check appearance before video calls
+- **Multitasking**: Camera visible while using other apps
 
-## 🔧 Personalización
+## 🔧 Customization
 
-La aplicación es fácilmente personalizable:
+The app is easily customizable:
 
-- **Tamaños**: Modifica las dimensiones en `styles.css`
-- **Colores**: Cambia la paleta de colores y efectos
-- **Controles**: Añade nuevos botones y funcionalidades
-- **Animaciones**: Ajusta las transiciones y efectos
+- **Sizing**: Change dimensions in `styles.css`
+- **Colors**: Change the color palette and effects
+- **Controls**: Add new buttons and features
+- **Animations**: Adjust transitions and effects
 
-## 📝 Licencia
+## 📝 License
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-Las contribuciones son bienvenidas. Por favor:
+Contributions are welcome. Please:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📞 Soporte
+## 📞 Support
 
-Si tienes problemas o sugerencias:
+If you have problems or suggestions:
 
-- Abre un [Issue](https://github.com/tu-usuario/jc-bubble-cam-web/issues)
-- Contacta al desarrollador
-- Revisa la documentación
+- Open an [Issue](https://github.com/your-user/jc-bubble-cam-web/issues)
+- Contact the developer
+- Review the documentation
 
 ---
+**JC Bubble Cam Web** - Turn your camera into an elegant and functional floating experience. 🎥✨
 
-**JC Bubble Cam Web** - Convierte tu cámara en una experiencia flotante elegante y funcional. 🎥✨
-
-## Licencia
-Este proyecto está bajo la [Licencia Jhony Creativo](./LICENSE).
+## License
+This project is licensed under the [Jhony Creativo License](./LICENSE).
